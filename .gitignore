@@ -1,0 +1,30 @@
+# ====================================================================
+# ENVIRONMENT & CREDENTIALS (NEVER LEAK TO GITHUB)
+# ====================================================================
+.env
+.env.local
+.venv/
+env/
+venv/
+ENV/
+
+# ====================================================================
+# DATA & DATABASES (EXCLUDE LARGE FILES AND LOCAL SQLITE)
+# ====================================================================
+# Exclude the generated SQLite database file
+data/processed/*.db
+
+# Optional: If you want to block the raw CSV from being pushed due to size limits
+data/raw/*.csv
+data/raw/*.xlsx
+
+# ====================================================================
+# SYSTEM & IDE FILES (VS CODE & ANACONDA CACHE)
+# ====================================================================
+.vscode/
+.pytest_cache/
+__pycache__/
+*.pyc
+
+# Streamlit specific local configurations
+.streamlit/
